@@ -1,0 +1,270 @@
+/**
+ * Paystack Admin CSS
+ */
+
+/* Webhook URL styling */
+.wc-paystack-webhook-url,
+.wc-paystack-callback-url {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.wc-paystack-webhook-url code,
+.wc-paystack-callback-url code {
+  background: #f1f1f1;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 12px;
+  flex: 1;
+  word-break: break-all;
+  border: 1px solid #ddd;
+}
+
+.wc-paystack-copy-btn {
+  background: #0073aa;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3s;
+}
+
+.wc-paystack-copy-btn:hover {
+  background: #005a87;
+}
+
+.wc-paystack-copy-btn:focus {
+  outline: 2px solid #0073aa;
+  outline-offset: 2px;
+}
+
+/* Transaction status styling */
+.transaction-status {
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.transaction-status.status-success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.transaction-status.status-failed {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.transaction-status.status-pending {
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeaa7;
+}
+
+.transaction-status.status-reversed {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Transaction table styling */
+.wp-list-table .column-transaction-id {
+  width: 120px;
+}
+
+.wp-list-table .column-order-id {
+  width: 80px;
+}
+
+.wp-list-table .column-amount {
+  width: 100px;
+}
+
+.wp-list-table .column-type {
+  width: 80px;
+}
+
+.wp-list-table .column-status {
+  width: 100px;
+}
+
+.wp-list-table .column-customer {
+  width: 150px;
+}
+
+.wp-list-table .column-reference {
+  width: 120px;
+}
+
+.wp-list-table .column-date {
+  width: 120px;
+}
+
+.wp-list-table .column-actions {
+  width: 80px;
+}
+
+/* Reversed transaction styling */
+.transaction-reversed {
+  background-color: #fff2f2;
+}
+
+.transaction-reversed:hover {
+  background-color: #ffebeb;
+}
+
+/* Export button styling */
+#wc-paystack-export-transactions {
+  background: #00a32a;
+  color: white;
+  border-color: #00a32a;
+}
+
+#wc-paystack-export-transactions:hover {
+  background: #008a20;
+  border-color: #008a20;
+}
+
+/* Filter form styling */
+.tablenav .actions input[type="text"],
+.tablenav .actions select {
+  margin-right: 5px;
+}
+
+.tablenav .actions input[type="text"] {
+  width: 120px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 782px) {
+  .wc-paystack-webhook-url,
+  .wc-paystack-callback-url {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .wc-paystack-webhook-url code,
+  .wc-paystack-callback-url code {
+    margin-bottom: 10px;
+  }
+
+  .tablenav .actions input[type="text"] {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
+
+/* Settings page improvements */
+.wc-paystack-settings-section {
+  margin-top: 20px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ccd0d4;
+  border-radius: 4px;
+}
+
+.wc-paystack-settings-section h3 {
+  margin-top: 0;
+  color: #23282d;
+}
+
+/* Notice styling */
+.wc-paystack-notice {
+  padding: 12px;
+  margin: 5px 0 15px;
+  border-left: 4px solid #0073aa;
+  background: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.wc-paystack-notice.notice-warning {
+  border-left-color: #ffb900;
+}
+
+.wc-paystack-notice.notice-error {
+  border-left-color: #dc3232;
+}
+
+.wc-paystack-notice.notice-success {
+  border-left-color: #00a32a;
+}
+
+/* Loading spinner */
+.wc-paystack-loading {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #0073aa;
+  border-radius: 50%;
+  animation: wc-paystack-spin 1s linear infinite;
+  margin-left: 5px;
+}
+
+@keyframes wc-paystack-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Button improvements */
+.button.wc-paystack-button {
+  background: #0073aa;
+  border-color: #0073aa;
+  color: #fff;
+}
+
+.button.wc-paystack-button:hover {
+  background: #005a87;
+  border-color: #005a87;
+}
+
+.button.wc-paystack-button:focus {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 3px #0073aa;
+}
+
+/* Table improvements */
+.widefat .column-actions .button {
+  margin-right: 5px;
+}
+
+.widefat .column-actions .button:last-child {
+  margin-right: 0;
+}
+
+/* Form field improvements */
+.form-table th {
+  width: 200px;
+}
+
+.form-table td {
+  padding: 15px 10px;
+}
+
+.form-table .description {
+  margin-top: 5px;
+  font-style: italic;
+  color: #666;
+}
+
+/* Tooltip styling */
+.woocommerce-help-tip {
+  color: #666;
+  cursor: help;
+}
+
+.woocommerce-help-tip:hover {
+  color: #0073aa;
+}
