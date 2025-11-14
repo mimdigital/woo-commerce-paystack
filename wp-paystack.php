@@ -1,11 +1,11 @@
 <?php
 /**
 * Plugin Name: WooCommerce Paystack Payment Gateway
-* Plugin URI: https://www.paystack.com
+* Plugin URI: https://www.mimdigital.net
 * Description: Accept payments via Paystack in your WooCommerce store
 * Version: 1.0.9
-* Author: Paystack
-* Author URI: https://www.paystack.com
+* Author: MiMDigital
+* Author URI: https://www.mimdigital.net
 * Text Domain: wc-paystack
 * Domain Path: /languages
 * Requires at least: 5.8
